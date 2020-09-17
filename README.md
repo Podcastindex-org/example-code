@@ -1,6 +1,8 @@
 # example-code
 Code examples for the API.
 
+For full example repositories, go here:  https://github.com/Podcastindex-org-Examples
+
 **PHP**
 
 * * *
