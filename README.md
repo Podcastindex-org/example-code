@@ -147,7 +147,7 @@ Example uses [node-fetch](https://www.npmjs.com/package/node-fetch)
     const APISECRET = 'yzJe2eE7XV-3eY576dyRZ6wXyAbndh6LUrCZ8KN|'
 
     const ts = Math.floor(Date.now() / 1000)
-    const authString = KEY + SECRET + ts.toString()
+    const authString = APIKEY + APISECRET + ts.toString()
     const authHeader = crypto.createHash('sha1').update(authString).digest('hex')
 
     fetch('https://api.podcastindex.org/api/1.0/search/byterm?q=bastiat',
@@ -156,7 +156,7 @@ Example uses [node-fetch](https://www.npmjs.com/package/node-fetch)
         headers: {
           "User-Agent" : "homemade pod-fetcher 0.026b",
           "X-Auth-Date" : ts,
-          "X-Auth-Key"  : KEY,
+          "X-Auth-Key"  : APIKEY,
           "Authorization" : authHeader
         },
 
